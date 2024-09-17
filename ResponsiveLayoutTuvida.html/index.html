@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fcb9e5;
+    }
+
+    nav {
+      background-color: #f3c7dc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    nav a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #ffdeea;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Sign Up</a>
+  </nav>
+
+  <div class="container">
+    <div class="grid">
+      <img src="pink1.jpg" alt="R">
+      <img src="pink2.jpg" alt="Bow">
+    </div>
+  </div>
+</body>
+</html>
